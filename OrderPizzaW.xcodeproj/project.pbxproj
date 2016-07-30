@@ -20,6 +20,12 @@
 		ACD537F71D4D1E6F005CFAA3 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD537F61D4D1E6F005CFAA3 /* InterfaceController.swift */; };
 		ACD537F91D4D1E6F005CFAA3 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD537F81D4D1E6F005CFAA3 /* ExtensionDelegate.swift */; };
 		ACD537FB1D4D1E6F005CFAA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACD537FA1D4D1E6F005CFAA3 /* Assets.xcassets */; };
+		ACD5380E1D4D22B0005CFAA3 /* DoughController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD5380D1D4D22B0005CFAA3 /* DoughController.swift */; };
+		ACD538101D4D22CE005CFAA3 /* CheeseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD5380F1D4D22CE005CFAA3 /* CheeseController.swift */; };
+		ACD538121D4D22E4005CFAA3 /* IngredientsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD538111D4D22E4005CFAA3 /* IngredientsController.swift */; };
+		ACD538141D4D22FA005CFAA3 /* PayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD538131D4D22FA005CFAA3 /* PayController.swift */; };
+		ACD538161D4D230F005CFAA3 /* ConfirmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD538151D4D230F005CFAA3 /* ConfirmController.swift */; };
+		ACD538181D4D2323005CFAA3 /* OrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD538171D4D2323005CFAA3 /* OrderController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +97,12 @@
 		ACD537F81D4D1E6F005CFAA3 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		ACD537FA1D4D1E6F005CFAA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACD537FC1D4D1E6F005CFAA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACD5380D1D4D22B0005CFAA3 /* DoughController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoughController.swift; sourceTree = "<group>"; };
+		ACD5380F1D4D22CE005CFAA3 /* CheeseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheeseController.swift; sourceTree = "<group>"; };
+		ACD538111D4D22E4005CFAA3 /* IngredientsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientsController.swift; sourceTree = "<group>"; };
+		ACD538131D4D22FA005CFAA3 /* PayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayController.swift; sourceTree = "<group>"; };
+		ACD538151D4D230F005CFAA3 /* ConfirmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmController.swift; sourceTree = "<group>"; };
+		ACD538171D4D2323005CFAA3 /* OrderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +191,12 @@
 				ACD537F81D4D1E6F005CFAA3 /* ExtensionDelegate.swift */,
 				ACD537FA1D4D1E6F005CFAA3 /* Assets.xcassets */,
 				ACD537FC1D4D1E6F005CFAA3 /* Info.plist */,
+				ACD5380D1D4D22B0005CFAA3 /* DoughController.swift */,
+				ACD5380F1D4D22CE005CFAA3 /* CheeseController.swift */,
+				ACD538111D4D22E4005CFAA3 /* IngredientsController.swift */,
+				ACD538131D4D22FA005CFAA3 /* PayController.swift */,
+				ACD538151D4D230F005CFAA3 /* ConfirmController.swift */,
+				ACD538171D4D2323005CFAA3 /* OrderController.swift */,
 			);
 			path = "OrderPizzaW WatchKit Extension";
 			sourceTree = "<group>";
@@ -362,8 +380,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACD538181D4D2323005CFAA3 /* OrderController.swift in Sources */,
 				ACD537F91D4D1E6F005CFAA3 /* ExtensionDelegate.swift in Sources */,
+				ACD5380E1D4D22B0005CFAA3 /* DoughController.swift in Sources */,
+				ACD538161D4D230F005CFAA3 /* ConfirmController.swift in Sources */,
+				ACD538141D4D22FA005CFAA3 /* PayController.swift in Sources */,
+				ACD538101D4D22CE005CFAA3 /* CheeseController.swift in Sources */,
 				ACD537F71D4D1E6F005CFAA3 /* InterfaceController.swift in Sources */,
+				ACD538121D4D22E4005CFAA3 /* IngredientsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
