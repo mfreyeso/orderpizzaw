@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ACA699D51D4E6AD3004DBB89 /* OrderProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA699D41D4E6AD3004DBB89 /* OrderProduct.swift */; };
 		ACD537C91D4D1E6F005CFAA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD537C81D4D1E6F005CFAA3 /* AppDelegate.swift */; };
 		ACD537CB1D4D1E6F005CFAA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD537CA1D4D1E6F005CFAA3 /* ViewController.swift */; };
 		ACD537CE1D4D1E6F005CFAA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACD537CC1D4D1E6F005CFAA3 /* Main.storyboard */; };
@@ -78,6 +79,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ACA699D41D4E6AD3004DBB89 /* OrderProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderProduct.swift; sourceTree = "<group>"; };
 		ACD537C51D4D1E6E005CFAA3 /* OrderPizzaW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrderPizzaW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACD537C81D4D1E6F005CFAA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACD537CA1D4D1E6F005CFAA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				ACD538131D4D22FA005CFAA3 /* PayController.swift */,
 				ACD538151D4D230F005CFAA3 /* ConfirmController.swift */,
 				ACD538171D4D2323005CFAA3 /* OrderController.swift */,
+				ACA699D41D4E6AD3004DBB89 /* OrderProduct.swift */,
 			);
 			path = "OrderPizzaW WatchKit Extension";
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				ACD538181D4D2323005CFAA3 /* OrderController.swift in Sources */,
 				ACD537F91D4D1E6F005CFAA3 /* ExtensionDelegate.swift in Sources */,
 				ACD5380E1D4D22B0005CFAA3 /* DoughController.swift in Sources */,
+				ACA699D51D4E6AD3004DBB89 /* OrderProduct.swift in Sources */,
 				ACD538161D4D230F005CFAA3 /* ConfirmController.swift in Sources */,
 				ACD538141D4D22FA005CFAA3 /* PayController.swift in Sources */,
 				ACD538101D4D22CE005CFAA3 /* CheeseController.swift in Sources */,
@@ -647,6 +651,7 @@
 				ACD538011D4D1E6F005CFAA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ACD538031D4D1E6F005CFAA3 /* Build configuration list for PBXNativeTarget "OrderPizzaW WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -655,6 +660,7 @@
 				ACD538051D4D1E6F005CFAA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ACD538071D4D1E6F005CFAA3 /* Build configuration list for PBXNativeTarget "OrderPizzaW" */ = {
 			isa = XCConfigurationList;
@@ -663,6 +669,7 @@
 				ACD538091D4D1E6F005CFAA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ACD5380A1D4D1E6F005CFAA3 /* Build configuration list for PBXNativeTarget "OrderPizzaWTests" */ = {
 			isa = XCConfigurationList;
@@ -671,6 +678,7 @@
 				ACD5380C1D4D1E6F005CFAA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -12,8 +12,14 @@ import Foundation
 
 class DoughController: WKInterfaceController {
 
+
+    @IBAction func changeDough(value: Int) {
+    }
+    @IBOutlet var doughPicker: WKInterfacePicker!
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        let d = context as! OrderProduct
+        print(d.sizeProduct)
         
         // Configure interface objects here.
     }

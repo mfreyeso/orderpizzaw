@@ -10,10 +10,21 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="OrderPizzaW_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="left" text="Label" id="cA2-fj-8nx"/>
-                        <picker height="48" alignment="left" id="2bi-h5-ykD"/>
-                        <button width="1" alignment="left" title="Button" id="7bp-G6-hRB"/>
+                        <label alignment="left" text="Size your Pizza?" id="cA2-fj-8nx"/>
+                        <picker height="82" alignment="left" id="2bi-h5-ykD">
+                            <connections>
+                                <action selector="pickerSelectedItemChanged:" destination="AgC-eL-Hgc" id="KuE-Mw-c2Z"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" title="Next" id="7bp-G6-hRB">
+                            <connections>
+                                <action selector="sizeSelectedAction" destination="AgC-eL-Hgc" id="azP-7L-oUL"/>
+                            </connections>
+                        </button>
                     </items>
+                    <connections>
+                        <outlet property="sizePicker" destination="2bi-h5-ykD" id="u7A-e7-0BP"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="73" y="172"/>
@@ -23,10 +34,17 @@
             <objects>
                 <controller identifier="DoughView" id="9Qq-g5-S60" customClass="DoughController" customModule="OrderPizzaW_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Label" id="2Eo-px-Gbz"/>
-                        <picker height="48" alignment="left" id="pAs-mY-EjL"/>
-                        <button width="1" alignment="left" title="Button" id="ZPT-xM-VNX"/>
+                        <label alignment="left" text="Dough for Pizza?" id="2Eo-px-Gbz"/>
+                        <picker height="81" alignment="left" focusStyle="stack" id="pAs-mY-EjL">
+                            <connections>
+                                <action selector="changeDough:" destination="9Qq-g5-S60" id="2mF-Ir-JNK"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" title="Next" id="ZPT-xM-VNX"/>
                     </items>
+                    <connections>
+                        <outlet property="doughPicker" destination="pAs-mY-EjL" id="Dyb-Uh-ZoU"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="340" y="172"/>
@@ -36,9 +54,9 @@
             <objects>
                 <controller identifier="CheeseView" id="BEq-UU-gl9" customClass="CheeseController" customModule="OrderPizzaW_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Label" id="PYb-7L-nXf"/>
-                        <picker height="48" alignment="left" id="1xO-dT-YOn"/>
-                        <button width="1" alignment="left" title="Button" id="ydZ-lM-PSx"/>
+                        <label alignment="left" text="Cheese type?" id="PYb-7L-nXf"/>
+                        <picker height="85" alignment="left" focusStyle="stack" id="1xO-dT-YOn"/>
+                        <button width="1" height="34.5" alignment="left" title="Next" id="ydZ-lM-PSx"/>
                     </items>
                 </controller>
             </objects>
