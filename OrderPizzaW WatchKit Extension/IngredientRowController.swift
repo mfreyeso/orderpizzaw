@@ -10,9 +10,15 @@ import WatchKit
 
 class IngredientRowController: NSObject {
     
-    
+    var valSelected :Bool = false
     @IBOutlet var ingredientSwOutlet: WKInterfaceSwitch!
 
     @IBAction func ingredientSwitchAction(value: Bool) {
+        valSelected = value
     }
+    
+    func optionSelectedIngredient() -> Bool {
+        return valSelected
+    }
+    
 }

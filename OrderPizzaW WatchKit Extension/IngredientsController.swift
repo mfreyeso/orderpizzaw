@@ -12,10 +12,12 @@ import Foundation
 
 class IngredientsController: WKInterfaceController {
 
-    @IBOutlet var tableIngredients: WKInterfaceTable!
-    
+    var resultPartial = OrderProduct()
     var ingredients = ["Pineapple", "Ham", "Onion", "Pepper", "Anchovies", "Turkey", "Sausage", "Olives", "Pepperoni"]
     
+    var ingredientsSelectedFinal :String = ""
+    
+    @IBOutlet var tableIngredients: WKInterfaceTable!
     
     func refreshTable(){
         //Set number of rows and the class of the rows
@@ -35,13 +37,46 @@ class IngredientsController: WKInterfaceController {
         tableIngredients.scrollToRowAtIndex(tableIngredients.numberOfRows - 1)
     }
     
+    
+    func validateIngredients(){
+        var ingredientSelected :String = ""
+        var countIngredients = 0
+        for var index=0; index < tableIngredients.numberOfRows; index++ {
+            let row = tableIngredients.rowControllerAtIndex(index) as! IngredientRowController
+            if row.optionSelectedIngredient(){
+                countIngredients += 1
+                ingredientSelected = ingredientSelected + " " + ingredients[index]
+            }
+        }
+        
+        if countIngredients > 5{
+            // let h0 = { print("ok")}
+            let action1 = WKAlertAction(title: "Approve", style: .Cancel){}
+            presentAlertControllerWithTitle("Info", message: "Max 5 ingredients your choose", preferredStyle: .ActionSheet, actions: [action1])
+        }
+        else if countIngredients == 0 {
+            // let h1 = { print("ok")}
+            let action1 = WKAlertAction(title: "Approve", style: .Cancel){}
+            presentAlertControllerWithTitle("Info", message: "Min 1 ingredient your choose", preferredStyle: .ActionSheet, actions: [action1])
+        
+        }
+        ingredientsSelectedFinal = ingredientSelected
+    }
+    
+    
+    
     @IBAction func ingredientsSelectedAction() {
-        let resultContext = OrderProduct()
+        validateIngredients()
+        let resultContext = resultPartial
+        resultContext.modifyIngredientsProduct(ingredientsSelectedFinal)
         pushControllerWithName("PayView", context: resultContext)
     }
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        
+        let d = context as! OrderProduct
+        resultPartial.modifySizeProduct(d.sizeProduct)
+        resultPartial.modifyDoughProduct(d.doughProduct)
+        resultPartial.modifyCheeseProduct(d.cheeseProduct)
         // Configure interface objects here.
     }
 
