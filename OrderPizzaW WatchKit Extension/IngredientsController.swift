@@ -15,7 +15,7 @@ class IngredientsController: WKInterfaceController {
     var resultPartial = OrderProduct()
     var ingredients = ["Pineapple", "Ham", "Onion", "Pepper", "Anchovies", "Turkey", "Sausage", "Olives", "Pepperoni"]
     
-    var ingredientsSelectedFinal :String = ""
+    var ingredientsSelectedFinal = [String]()
     
     @IBOutlet var tableIngredients: WKInterfaceTable!
     
@@ -39,13 +39,13 @@ class IngredientsController: WKInterfaceController {
     
     
     func validateIngredients(){
-        var ingredientSelected :String = ""
+        var ingredientSelected = [String]()
         var countIngredients = 0
         for var index=0; index < tableIngredients.numberOfRows; index++ {
             let row = tableIngredients.rowControllerAtIndex(index) as! IngredientRowController
             if row.optionSelectedIngredient(){
                 countIngredients += 1
-                ingredientSelected = ingredientSelected + " " + ingredients[index]
+                ingredientSelected.append(ingredients[index])
             }
         }
         

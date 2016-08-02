@@ -12,7 +12,7 @@ class OrderProduct: NSObject {
     var sizeProduct:String = ""
     var doughProduct:String = ""
     var cheeseProduct:String = ""
-    var ingredientsProduct:String = ""
+    var ingredientsProduct = [String]()
     var payOption:String = ""
     
     func modifySizeProduct(p:String){
@@ -27,12 +27,16 @@ class OrderProduct: NSObject {
         cheeseProduct = p
     }
     
-    func modifyIngredientsProduct(p:String){
+    func modifyIngredientsProduct(p:[String]){
         ingredientsProduct = p
     }
     
     func modifyPayOption(p:String){
         payOption = p
+    }
+    
+    func ingredientsArray() -> [String]{
+        return ingredientsProduct
     }
 
 }

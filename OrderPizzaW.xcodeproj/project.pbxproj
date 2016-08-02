@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC908B641D504B4900F15857 /* IngredientRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC908B631D504B4900F15857 /* IngredientRowController.swift */; };
+		ACA3021F1D514B37000EE331 /* IngredientFnRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA3021E1D514B37000EE331 /* IngredientFnRowController.swift */; };
 		ACA699D51D4E6AD3004DBB89 /* OrderProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA699D41D4E6AD3004DBB89 /* OrderProduct.swift */; };
 		ACD537C91D4D1E6F005CFAA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD537C81D4D1E6F005CFAA3 /* AppDelegate.swift */; };
 		ACD537CB1D4D1E6F005CFAA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD537CA1D4D1E6F005CFAA3 /* ViewController.swift */; };
@@ -81,6 +82,7 @@
 
 /* Begin PBXFileReference section */
 		AC908B631D504B4900F15857 /* IngredientRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientRowController.swift; sourceTree = "<group>"; };
+		ACA3021E1D514B37000EE331 /* IngredientFnRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientFnRowController.swift; sourceTree = "<group>"; };
 		ACA699D41D4E6AD3004DBB89 /* OrderProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderProduct.swift; sourceTree = "<group>"; };
 		ACD537C51D4D1E6E005CFAA3 /* OrderPizzaW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrderPizzaW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACD537C81D4D1E6F005CFAA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				ACD538171D4D2323005CFAA3 /* OrderController.swift */,
 				ACA699D41D4E6AD3004DBB89 /* OrderProduct.swift */,
 				AC908B631D504B4900F15857 /* IngredientRowController.swift */,
+				ACA3021E1D514B37000EE331 /* IngredientFnRowController.swift */,
 			);
 			path = "OrderPizzaW WatchKit Extension";
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				ACD537F71D4D1E6F005CFAA3 /* InterfaceController.swift in Sources */,
 				ACD538121D4D22E4005CFAA3 /* IngredientsController.swift in Sources */,
 				AC908B641D504B4900F15857 /* IngredientRowController.swift in Sources */,
+				ACA3021F1D514B37000EE331 /* IngredientFnRowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

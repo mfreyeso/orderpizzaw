@@ -11,7 +11,7 @@
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="OrderPizzaW_WatchKit_App" customModuleProvider="target">
                     <items>
                         <label alignment="left" text="Size your Pizza?" id="cA2-fj-8nx"/>
-                        <picker height="82" alignment="left" id="2bi-h5-ykD">
+                        <picker height="82" alignment="left" focusStyle="stack" id="2bi-h5-ykD">
                             <connections>
                                 <action selector="pickerSelectedItemChanged:" destination="AgC-eL-Hgc" id="KuE-Mw-c2Z"/>
                             </connections>
@@ -35,7 +35,7 @@
                 <controller identifier="DoughView" id="9Qq-g5-S60" customClass="DoughController" customModule="OrderPizzaW_WatchKit_Extension">
                     <items>
                         <label alignment="left" text="Dough for Pizza?" id="2Eo-px-Gbz"/>
-                        <picker height="81" alignment="left" id="pAs-mY-EjL">
+                        <picker height="81" alignment="left" focusStyle="stack" id="pAs-mY-EjL">
                             <connections>
                                 <action selector="pickerSelectedItemChanged:" destination="9Qq-g5-S60" id="ILw-uM-ayG"/>
                             </connections>
@@ -59,7 +59,7 @@
                 <controller identifier="CheeseView" id="BEq-UU-gl9" customClass="CheeseController" customModule="OrderPizzaW_WatchKit_Extension">
                     <items>
                         <label alignment="left" text="Cheese type?" id="PYb-7L-nXf"/>
-                        <picker height="85" alignment="left" id="1xO-dT-YOn">
+                        <picker height="85" alignment="left" focusStyle="stack" id="1xO-dT-YOn">
                             <connections>
                                 <action selector="changeCheese:" destination="BEq-UU-gl9" id="eBN-eG-oam"/>
                             </connections>
@@ -82,39 +82,110 @@
             <objects>
                 <controller identifier="OrderFinal" id="gvV-Ey-Fud" customClass="OrderController" customModule="OrderPizzaW_WatchKit_Extension">
                     <items>
-                        <imageView alignment="left" id="rhY-Z9-ltd"/>
-                        <label width="1" alignment="left" text="Label" textAlignment="center" id="L5C-Bg-zpZ"/>
+                        <group width="1" alignment="left" id="QS7-pj-xtj"/>
+                        <label width="1" alignment="left" text="Great" textAlignment="center" id="L5C-Bg-zpZ">
+                            <color key="textColor" red="1" green="0.80000001192092896" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
+                        </label>
+                        <label width="1" alignment="left" text="Your pizza" textAlignment="center" id="FDB-EB-3Kv">
+                            <color key="textColor" red="1" green="0.80000001192092896" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                        <label width="1" alignment="left" text="will be ready in" textAlignment="center" id="sk6-Iu-CoC">
+                            <color key="textColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                        <label width="1" alignment="left" text="20 minutes" textAlignment="center" id="pgC-2H-zZh">
+                            <color key="textColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
+                        </label>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="181" y="503"/>
+            <point key="canvasLocation" x="181" y="497"/>
         </scene>
         <!--ConfirmationView-->
         <scene sceneID="eIO-28-9w6">
             <objects>
                 <controller identifier="ConfirmationView" id="mvC-yK-siT" customClass="ConfirmController" customModule="OrderPizzaW_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Your Order" id="uma-YP-erm"/>
-                        <label alignment="left" text="Label" id="4GL-kS-iwb"/>
-                        <label alignment="left" text="Label" id="vX1-KI-zbD"/>
-                        <button width="1" alignment="left" title="Confirm" id="LwW-ns-Qy4"/>
+                        <label height="16.5" alignment="left" text="Your Order" id="uma-YP-erm"/>
+                        <label alignment="left" text="Size" id="6bn-EB-wJT">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                        <label alignment="left" text="Label" id="blN-Lr-ucO">
+                            <color key="textColor" red="1" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <label alignment="left" text="Dough" id="AmY-IG-cqf">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                        <label alignment="left" text="Label" id="DWx-K3-J30">
+                            <color key="textColor" red="1" green="0.80000001192092896" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <label alignment="left" text="Ingredients" id="qQy-K9-VJB">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                        <table alignment="left" id="euD-VJ-mS7">
+                            <items>
+                                <tableRow identifier="row" id="DAh-sV-8yr" customClass="IngredientFnRowController" customModule="OrderPizzaW_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="22.5" alignment="left" id="jGw-N0-C4c">
+                                        <items>
+                                            <label alignment="left" text="Label" id="nEO-Li-eBx">
+                                                <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="ingredientLabel" destination="nEO-Li-eBx" id="9NN-TC-YMI"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <label alignment="left" text="Pay" id="p5Q-fw-MAQ">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                        <label alignment="left" text="Label" id="6KA-iT-Bxj">
+                            <color key="textColor" red="1" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <button width="1" alignment="left" title="Confirm" id="LwW-ns-Qy4">
+                            <connections>
+                                <action selector="confirmAction" destination="mvC-yK-siT" id="xbY-Fb-Rdv"/>
+                            </connections>
+                        </button>
                     </items>
+                    <connections>
+                        <outlet property="doughLabel" destination="DWx-K3-J30" id="fDP-CC-6wd"/>
+                        <outlet property="payLabel" destination="6KA-iT-Bxj" id="OLt-Vf-czP"/>
+                        <outlet property="sizeLabel" destination="blN-Lr-ucO" id="PFm-CA-WT3"/>
+                        <outlet property="tableIngredients" destination="euD-VJ-mS7" id="eaU-Rf-wed"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="475" y="503"/>
+            <point key="canvasLocation" x="475" y="495"/>
         </scene>
         <!--PayView-->
         <scene sceneID="0Xh-dP-evj">
             <objects>
                 <controller identifier="PayView" id="eMq-1x-rwb" customClass="PayController" customModule="OrderPizzaW_WatchKit_Extension">
                     <items>
-                        <button width="1" height="45" alignment="left" title="Credit Card" id="jj3-Za-gmz"/>
-                        <separator alignment="left" id="Ano-BI-8P5"/>
-                        <button width="1" height="45" alignment="left" title="Cash" id="WCr-Jx-PyG"/>
+                        <label alignment="left" text="Form Pay" id="zoq-fp-0wL"/>
+                        <picker height="66" alignment="left" focusStyle="stack" id="xF4-cP-iuG">
+                            <connections>
+                                <action selector="changeSelectPay:" destination="eMq-1x-rwb" id="KdX-4z-Loq"/>
+                            </connections>
+                        </picker>
+                        <button width="1" height="45" alignment="left" title="Next" id="WCr-Jx-PyG">
+                            <connections>
+                                <action selector="paySelectedAction" destination="eMq-1x-rwb" id="wgP-YQ-dVk"/>
+                            </connections>
+                        </button>
                     </items>
+                    <connections>
+                        <outlet property="payPicker" destination="xF4-cP-iuG" id="PAV-0m-Ubk"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="773" y="503"/>
+            <point key="canvasLocation" x="773" y="492"/>
         </scene>
         <!--IngredientsView-->
         <scene sceneID="xzS-QI-5vj">

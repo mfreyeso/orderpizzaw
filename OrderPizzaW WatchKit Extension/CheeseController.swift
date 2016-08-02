@@ -21,8 +21,6 @@ class CheeseController: WKInterfaceController {
         ("Item3", "Parmesan"),
         ("Item4", "No Cheese")]
     
-    var cheeseData = ["Mozarella", "Cheddar", "Parmesan", "No Cheese"]
-    
     @IBOutlet var cheesePicker: WKInterfacePicker!
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
