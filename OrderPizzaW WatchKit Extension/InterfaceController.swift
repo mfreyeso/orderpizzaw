@@ -29,7 +29,6 @@ class InterfaceController: WKInterfaceController {
     }
     
     @IBAction func pickerSelectedItemChanged(value: Int) {
-        print(sizeItems[value].1)
         sizeSelected = sizeItems[value].1
     }
     

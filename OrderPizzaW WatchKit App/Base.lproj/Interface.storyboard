@@ -35,12 +35,16 @@
                 <controller identifier="DoughView" id="9Qq-g5-S60" customClass="DoughController" customModule="OrderPizzaW_WatchKit_Extension">
                     <items>
                         <label alignment="left" text="Dough for Pizza?" id="2Eo-px-Gbz"/>
-                        <picker height="81" alignment="left" focusStyle="stack" id="pAs-mY-EjL">
+                        <picker height="81" alignment="left" id="pAs-mY-EjL">
                             <connections>
-                                <action selector="changeDough:" destination="9Qq-g5-S60" id="2mF-Ir-JNK"/>
+                                <action selector="pickerSelectedItemChanged:" destination="9Qq-g5-S60" id="ILw-uM-ayG"/>
                             </connections>
                         </picker>
-                        <button width="1" alignment="left" title="Next" id="ZPT-xM-VNX"/>
+                        <button width="1" alignment="left" title="Next" id="ZPT-xM-VNX">
+                            <connections>
+                                <action selector="doughSelectedAction" destination="9Qq-g5-S60" id="pkx-tN-yfU"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="doughPicker" destination="pAs-mY-EjL" id="Dyb-Uh-ZoU"/>
@@ -55,9 +59,20 @@
                 <controller identifier="CheeseView" id="BEq-UU-gl9" customClass="CheeseController" customModule="OrderPizzaW_WatchKit_Extension">
                     <items>
                         <label alignment="left" text="Cheese type?" id="PYb-7L-nXf"/>
-                        <picker height="85" alignment="left" focusStyle="stack" id="1xO-dT-YOn"/>
-                        <button width="1" height="34.5" alignment="left" title="Next" id="ydZ-lM-PSx"/>
+                        <picker height="85" alignment="left" id="1xO-dT-YOn">
+                            <connections>
+                                <action selector="changeCheese:" destination="BEq-UU-gl9" id="eBN-eG-oam"/>
+                            </connections>
+                        </picker>
+                        <button width="1" height="34.5" alignment="left" title="Next" id="ydZ-lM-PSx">
+                            <connections>
+                                <action selector="cheeseSelectedAction" destination="BEq-UU-gl9" id="v88-3U-rse"/>
+                            </connections>
+                        </button>
                     </items>
+                    <connections>
+                        <outlet property="cheesePicker" destination="1xO-dT-YOn" id="43S-st-mkw"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="625" y="172"/>
@@ -108,36 +123,33 @@
                     <items>
                         <table alignment="left" id="got-m7-F7Z">
                             <items>
-                                <tableRow id="zu2-Dz-Qdl">
-                                    <group key="rootItem" width="1" alignment="left" id="kA9-6Z-wXB"/>
-                                </tableRow>
-                                <tableRow id="D9V-Tu-hVq">
-                                    <group key="rootItem" width="1" alignment="left" id="tRg-kf-gMG"/>
-                                </tableRow>
-                                <tableRow id="eYx-iq-385">
-                                    <group key="rootItem" width="1" alignment="left" id="urV-ae-Kum"/>
-                                </tableRow>
-                                <tableRow id="onA-ND-2fB">
-                                    <group key="rootItem" width="1" alignment="left" id="aK0-tf-Hg4"/>
-                                </tableRow>
-                                <tableRow id="rvn-rv-zLm">
-                                    <group key="rootItem" width="1" alignment="left" id="daW-Ui-Wh5"/>
-                                </tableRow>
-                                <tableRow id="DFt-kf-J05">
-                                    <group key="rootItem" width="1" alignment="left" id="Rbe-UG-bEH"/>
-                                </tableRow>
-                                <tableRow id="r3M-XS-060">
-                                    <group key="rootItem" width="1" alignment="left" id="3Fu-J8-PVe"/>
-                                </tableRow>
-                                <tableRow id="pfF-xn-f1w">
-                                    <group key="rootItem" width="1" alignment="left" id="54J-q5-CTd"/>
-                                </tableRow>
-                                <tableRow id="5rK-yM-8ei">
-                                    <group key="rootItem" width="1" alignment="left" id="UCa-Cz-DdD"/>
+                                <tableRow identifier="row" id="zu2-Dz-Qdl" customClass="IngredientRowController" customModule="OrderPizzaW_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="kA9-6Z-wXB">
+                                        <items>
+                                            <switch width="1" alignment="left" value="YES" title="Switch" id="dWE-gP-xSw">
+                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                <connections>
+                                                    <action selector="ingredientSwitchAction:" destination="zu2-Dz-Qdl" id="3a1-Ts-guj"/>
+                                                </connections>
+                                            </switch>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="ingredientSwOutlet" destination="dWE-gP-xSw" id="6Lx-ls-ZSQ"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
+                        <separator alignment="left" id="IWK-nW-M3W"/>
+                        <button width="1" alignment="left" title="Next" id="zVR-ej-sDL">
+                            <connections>
+                                <action selector="ingredientsSelectedAction" destination="ZUe-cb-FOh" id="ADA-ZG-uqt"/>
+                            </connections>
+                        </button>
                     </items>
+                    <connections>
+                        <outlet property="tableIngredients" destination="got-m7-F7Z" id="AQS-Ia-8W8"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="901" y="172"/>
